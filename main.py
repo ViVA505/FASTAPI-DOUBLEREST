@@ -59,7 +59,7 @@ def update_product(product_id:int,product: UpdateItem):
     return list_products[product_id]
 
 
-#delete
+#delete method
 @app.delete("/delete-item")
 def delete_product(product_id:int = Query(..., description='The ID of the item to delete')):
     if product_id not in list_products:
